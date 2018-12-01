@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-from django.urls import reverse
+import django
+if django.VERSION[0] == 2:
+    from django.urls import reverse
+else:
+    from django.core.urlresolvers import reverse
 
 __author__ = 'lexich'
 
